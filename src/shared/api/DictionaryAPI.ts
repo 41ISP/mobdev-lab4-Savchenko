@@ -1,6 +1,7 @@
-import React from "react";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { IParameters } from "../../entities/langs/langs.model";
+import { ITranslate } from "../../entities/translate/translate.model";
+import { data } from "react-router-dom";
 
 const API_URL = "https://dictionary.yandex.net/api/v1/dicservice.json/";
 
@@ -10,6 +11,16 @@ const API_HEADERS = {
   Apikey:
     "dict.1.1.20250123T072148Z.dd7b721c5d58a801.0dcc96ebfb15ab2a7203eee682caf71a2b0b79f6",
 };
+
+export interface IApiResponse<T> {
+  data: T | null
+  error: null | string
+}
+
+export interface IApiError {
+  code: number
+message: string
+}
 
 const DictionaryAPI = {
   getLangs: async () => {
@@ -34,8 +45,20 @@ const DictionaryAPI = {
           },
         }
       );
-      return res.data;
-    } catch (error) {}
+      return {
+        ...res,
+        error: null
+      } as IApiResponse<ITranslate>;
+    } catch (e) {
+      const error = e as AxiosError<IApiError>
+      console.error(error);
+      console.log(error);
+      
+      return {
+        data: null,
+        error: error.response?.data?.message || error.message
+      }
+    }
   },
 };
 

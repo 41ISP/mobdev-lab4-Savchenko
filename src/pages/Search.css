@@ -1,0 +1,87 @@
+.btn{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.lang1 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    appearance: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.lang1:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.lang2 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    appearance: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.lang2:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    
+}
+
+.search:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+.search::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.searchDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+}
