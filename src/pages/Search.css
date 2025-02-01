@@ -85,3 +85,13 @@
     margin: 0 auto;
     width: 400px;
 }
+
+.clearCross {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.historyDiv {
+    display: flex;
+    gap: 10px;
+}
