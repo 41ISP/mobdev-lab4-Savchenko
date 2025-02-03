@@ -1,7 +1,6 @@
 import axios, { AxiosError } from "axios";
 import { IParameters } from "../../entities/langs/langs.model";
 import { ITranslate } from "../../entities/translate/translate.model";
-import { data } from "react-router-dom";
 
 const API_URL = "https://dictionary.yandex.net/api/v1/dicservice.json/";
 
